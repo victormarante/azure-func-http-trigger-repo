@@ -1,0 +1,29 @@
+[
+  {
+    "name": "HttpTrigger1",
+    "scriptFile": "azure-func-http-repo.dll",
+    "entryPoint": "azure_func_http_repo.HttpTrigger1.Run",
+    "language": "dotnet-isolated",
+    "properties": {
+      "IsCodeless": false
+    },
+    "bindings": [
+      {
+        "name": "req",
+        "direction": "In",
+        "type": "httpTrigger",
+        "authLevel": "Function",
+        "methods": [
+          "get",
+          "post"
+        ],
+        "properties": {}
+      },
+      {
+        "name": "$return",
+        "type": "http",
+        "direction": "Out"
+      }
+    ]
+  }
+]
